@@ -28,6 +28,12 @@ class UsersController < ApplicationController
     locals = Location.where(name: params[:name])
     @users = User.where(:location => locals)
     @loc = Location.where(name: params[:name]).take
+    @google_api_loc_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{@loc.latitude},#{@loc.longitude}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE"
+  loc_reference = HTTParty.get(@google_api_loc_url, :verify => false)
+  pic_reference =  loc_reference["results"].second["photos"].first["photo_reference"]
+
+  @image = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=#{pic_reference}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE"
+
   end
 
   def show

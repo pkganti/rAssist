@@ -10,6 +10,8 @@
 
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@loc.latitude}%2C#{@loc.longitude}" %>
 
+<%= image_tag @image %>
+
 <!-- <h3>Nearby locations</h3>
 <ul>
 <%# for location in @loc.nearbys(10) %>
