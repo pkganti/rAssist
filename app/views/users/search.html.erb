@@ -1,0 +1,23 @@
+<h1>Your destination results are</h1>
+<% @users.each do |user| %>
+  <%= link_to user.name, user %>
+<% end %>
+
+<p>
+  <strong>Address:</strong>
+  <%= @loc.name %>
+</p>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@loc.latitude}%2C#{@loc.longitude}" %>
+
+<!-- <h3>Nearby locations</h3>
+<ul>
+<%# for location in @loc.nearbys(10) %>
+  <li><%#= link_to location.name, location %> (<%#= location.distance.round(2) %> miles)</li>
+<%# end %>
+</ul> -->
+
+<%= form_tag(search_path, :method => :get) do %>
+  <input id="searchfield" type="text" name="name" placeholder="Search your favorite destination">
+  <button id="searchbutton">Search</button>
+<% end %>

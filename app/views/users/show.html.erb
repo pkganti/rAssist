@@ -1,0 +1,7 @@
+<%= form_tag(search_path, :method => :get) do %>
+  <input id="searchfield" type="text" name="name" placeholder="Search your favorite destination">
+  <button id="searchbutton">Search</button>
+<% end %>
+<li>Name: <%= @user.name %></li>
+<li>Email: <%= @user.email %></li>
+<img src="<%= @user.image %>" class="img-responsive" alt="">

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RAssist</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <ul class="nav nav-pills">
+  <% if @current_user.present? %>
+
+    <li role="presentation" class="active"><%= link_to 'Home', @current_user %></li>
+    <li role="presentation"><%= link_to 'About', about_path %></li>
+    <!-- <%# if @current_user.admin? %>
+      <%#= link_to "Users", users_path %>
+    <%# end %> -->
+    <li role="presentation"><%= link_to "Logout #{ @current_user.email }", logout_path, :method => :delete %></li>
+    <li role="presentation"><%= link_to "Change Profile", users_edit_path %></li>
+  <% else %>
+    <li role="presentation"><%= link_to 'Home', root_path %></li>
+    <li role="presentation"><%= link_to 'About', about_path %></li>
+    <li role="presentation"><%= link_to 'Sign up', new_user_path %></li>
+    <li role="presentation"><%= link_to 'Login', login_path %></li>
+  <% end %>
+  </ul>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>
