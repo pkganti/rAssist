@@ -13101,3 +13101,2546 @@ Processing by UsersController#edit as HTML
   [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1  [["id", 19]]
   Rendered users/edit.html.erb within layouts/application (4.7ms)
 Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/13" for ::1 at 2016-07-13 10:48:05 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 13]]
+Completed 404 Not Found in 38ms (ActiveRecord: 4.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=13):
+  app/controllers/users_controller.rb:34:in `show'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (104.8ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 10:48:11 +1000
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 345ms (Views: 343.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-07-13 10:48:14 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sVxCCZpd11BcXECUmrPL4V7vzI3GT/i0HK+aqpQwMbaCeDclR+MBH93WTaAzHn1bkfWRj8oavMCgwbDPuU670w=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 10:48:14 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 10:48:18 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-13 10:48:20 +1000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 10:48:22 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-13 10:48:23 +1000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-07-13 10:48:24 +1000
+Processing by PagesController#about as HTML
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 10:48:25 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-13 10:48:28 +1000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 10:48:29 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-07-13 10:48:36 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a4Phi9XJuE+FJ/zNL8IaSgnabocns7eZjym1rT7KkaRYp5SnCHduAASt8fmGb6zwxsAzhSvm8+0zR5/IE7QbwQ==", "email"=>"phani@abc.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "phani@abc.com"]]
+Redirected to http://localhost:3000/users/30
+Completed 302 Found in 70ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 10:48:36 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Sydney" for ::1 at 2016-07-13 10:48:41 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Sydney"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.4ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Sydney"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Sydney"]]
+  Rendered users/search.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 53ms (Views: 37.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 10:48:55 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Melbourne" for ::1 at 2016-07-13 10:49:02 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Melbourne"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Melbourne"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Melbourne"]]
+  Rendered users/search.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/31" for ::1 at 2016-07-13 10:49:04 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 31]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-07-13 11:34:27 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3SKj9ylgQ6QdHvfwHRrQ5Ry67ilmQGiPxG5wu9ZUBMPuBtbb9N6V65yU+sS0t2Zf06CzK2oVLPt4AFre+yqOpg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 11:34:27 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 11:34:30 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-07-13 11:34:43 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jxVtplZDam6BopHEN4SRyju6mpU5MaD+za4C8Up7pRe8MRiKi/28IQAonPCeKSdw9KDHlzVk5IpxwCiUZwUvcg==", "email"=>"rama@abc.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "rama@abc.com"]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 11:34:43 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-13 11:34:47 +1000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-07-13 11:34:53 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UdJ5DpFKIADIWse+8aL6HkQP62vjrsFe73DZezJja6Ri9gwiTPT2T0nQyopYD0ykixW2ae/7hSpTHvMeHx3hwQ==", "user"=>{"name"=>"rama", "email"=>"ra", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'ra' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'ra' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 58ms (Views: 29.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for ::1 at 2016-07-13 11:35:02 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MHYOMs5/CQMe50AEnSRoxqDJxrBlD9eLt836rncje6cDUnseE8HfTJ9tTTA0id58b9Obsmlak/8Lo9DLWl3xwg==", "user"=>{"name"=>"rama", "email"=>"rama@abc.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'rama@abc.com' LIMIT 1
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "rama"], ["email", "rama@abc.com"], ["password_digest", "$2a$10$uG6x27rtZihV8r4Fmvlt3uGODX.UTujCxOEJDL6bM/Ic0v/FbPvD."]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'rama@abc.com' AND "users"."id" != 33) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/33
+Completed 302 Found in 78ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/users/33" for ::1 at 2016-07-13 11:35:02 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-13 11:35:04 +1000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered users/edit.html.erb within layouts/application (15.3ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    22:   <%= f.url_field :image %>
+    23: 
+    24:   <%= f.label :location %>
+    25:   <%= f.text_field :location, :value => @user.location.name %>
+    26:   <!-- <%#= f.select :location_id, Location.pluck(:name, :id), :include_blank => true %> -->
+    27: 
+    28:   <%= f.label :password %>
+  app/views/users/edit.html.erb:25:in `block in _app_views_users_edit_html_erb___994280317838002180_70173878438580'
+  app/views/users/edit.html.erb:13:in `_app_views_users_edit_html_erb___994280317838002180_70173878438580'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-13 11:53:20 +1000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered users/edit.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    22:   <%= f.url_field :image %>
+    23: 
+    24:   <%= f.label :location %>
+    25:   <%= f.text_field :location, :value => @user.location.name %>
+    26:   <!-- <%#= f.select :location_id, Location.pluck(:name, :id), :include_blank => true %> -->
+    27: 
+    28:   <%= f.label :password %>
+  app/views/users/edit.html.erb:25:in `block in _app_views_users_edit_html_erb___994280317838002180_70173878438580'
+  app/views/users/edit.html.erb:13:in `_app_views_users_edit_html_erb___994280317838002180_70173878438580'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.4ms)
+
+
+Started PUT "/__web_console/repl_sessions/b2149fbab5ea24d955e414810b9e661d" for ::1 at 2016-07-13 11:53:45 +1000
+
+
+Started PUT "/__web_console/repl_sessions/b2149fbab5ea24d955e414810b9e661d" for ::1 at 2016-07-13 11:53:49 +1000
+
+
+Started PUT "/__web_console/repl_sessions/b2149fbab5ea24d955e414810b9e661d" for ::1 at 2016-07-13 11:53:59 +1000
+
+
+Started GET "/users/edit" for ::1 at 2016-07-13 11:54:49 +1000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered users/edit.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/phaniganti/Projects/rAssist/app/views/users/edit.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/phaniganti/Projects/rAssist/app/views/users/edit.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/edit.html.erb:41: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/edit.html.erb:43: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.0ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-13 11:54:58 +1000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered users/edit.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `location?' for #<User:0x007fa53d8f8808>
+Did you mean?  location
+               location=
+               location_id?
+               location_id):
+    22:   <%= f.url_field :image %>
+    23: 
+    24:   <%= f.label :location %>
+    25:   <% if @user.location? %>
+    26:     <%= f.text_field :location, :value => @user.location.name %>
+    27:   <% else %>
+    28:     <%= f.text_field :location, :placeholder=>'Location' %>
+  app/views/users/edit.html.erb:25:in `block in _app_views_users_edit_html_erb___994280317838002180_70173889565500'
+  app/views/users/edit.html.erb:13:in `_app_views_users_edit_html_erb___994280317838002180_70173889565500'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.8ms)
+
+
+Started PUT "/__web_console/repl_sessions/b46e5afaef573b05670c7a911ac8bc3b" for ::1 at 2016-07-13 11:55:06 +1000
+
+
+Started GET "/users/edit" for ::1 at 2016-07-13 11:55:38 +1000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered users/edit.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (help):
+    22:   <%= f.url_field :image %>
+    23: 
+    24:   <%= f.label :location %>
+    25:   <% raise "help" %>
+    26:   <% if @user.location.name? %>
+    27:     <%= f.text_field :location, :value => @user.location.name %>
+    28:   <% else %>
+  app/views/users/edit.html.erb:25:in `block in _app_views_users_edit_html_erb___994280317838002180_70173862587380'
+  app/views/users/edit.html.erb:13:in `_app_views_users_edit_html_erb___994280317838002180_70173862587380'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.2ms)
+
+
+Started PUT "/__web_console/repl_sessions/d0b1b2a30b03dd709d847f9f66e38b80" for ::1 at 2016-07-13 11:55:45 +1000
+
+
+Started PUT "/__web_console/repl_sessions/d0b1b2a30b03dd709d847f9f66e38b80" for ::1 at 2016-07-13 11:55:48 +1000
+
+
+Started PUT "/__web_console/repl_sessions/d0b1b2a30b03dd709d847f9f66e38b80" for ::1 at 2016-07-13 11:55:51 +1000
+
+
+Started GET "/users/edit" for ::1 at 2016-07-13 11:56:32 +1000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered users/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 11:56:32 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 11:56:32 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 11:56:32 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 11:56:32 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 11:56:32 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 11:56:32 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 11:56:32 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 11:56:32 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 11:56:32 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 11:56:32 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 11:56:33 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 11:56:33 +1000
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-07-13 11:56:33 +1000
+
+
+Started PATCH "/users/33" for ::1 at 2016-07-13 11:57:07 +1000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mJzLc7dwHtLV5N+ijgG85CzlP5RodCVEIud1n0UvWreruL5fas7InVRu0pYnrApe4/9ilmQhYTCeiV/6aFHQ0g==", "user"=>{"name"=>"rama", "email"=>"rama@abc.com", "image"=>"", "location"=>"Hyderabad", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes", "id"=>"33"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+Unpermitted parameter: location
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'rama@abc.com' AND "users"."id" != 33) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "image" = $1 WHERE "users"."id" = $2  [["image", ""], ["id", 33]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'rama@abc.com' AND "users"."id" != 33) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "location_id" = $1 WHERE "users"."id" = $2  [["location_id", 19], ["id", 33]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/33
+Completed 302 Found in 20ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/33" for ::1 at 2016-07-13 11:57:07 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-13 11:57:09 +1000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered users/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-07-13 12:00:35 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rLohDMxKz0gfYWKKqVYAXZHlRK6P4wj7Fp5vYuZNc7KfnlQgEfQZB57rb74A+7bnXv8ZrIO2TI+q8EUHyzP51w=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 12:00:35 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 12:41:01 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 12:41:05 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-07-13 12:41:11 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j5gnnpVBtwaghQIfJFGem8SD/3e1VdjuVIHQZRVkkuC8vFKySP9hSSEPDyuN/CghC5midbkAnJro7/oAOBoYhQ==", "email"=>"phani@abc.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "phani@abc.com"]]
+Redirected to http://localhost:3000/users/30
+Completed 302 Found in 87ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 12:41:11 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 12:41:23 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.0ms)
+
+NameError (uninitialized constant UsersController::HTTParty):
+  app/controllers/users_controller.rb:32:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.6ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 12:46:22 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 485ms (Views: 443.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 12:46:23 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 12:46:30 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 2.4ms)
+
+NameError (undefined local variable or method `google_api_loc_url' for #<UsersController:0x007f8ac84d19d0>
+Did you mean?  @google_api_loc_url):
+  app/controllers/users_controller.rb:32:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (112.9ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 12:47:22 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 42ms (Views: 30.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 12:47:22 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 12:47:22 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 12:47:22 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 12:47:22 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 12:47:22 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 12:47:22 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 12:47:22 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 12:47:23 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 12:47:23 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 12:47:23 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 12:47:23 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 12:47:23 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 12:47:29 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 878ms (ActiveRecord: 2.3ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/users_controller.rb:33:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (102.2ms)
+
+
+Started PUT "/__web_console/repl_sessions/3fdd984bf6c3b47818ffd877759b5888" for ::1 at 2016-07-13 12:48:02 +1000
+
+
+Started PUT "/__web_console/repl_sessions/3fdd984bf6c3b47818ffd877759b5888" for ::1 at 2016-07-13 12:48:24 +1000
+
+
+Started PUT "/__web_console/repl_sessions/3fdd984bf6c3b47818ffd877759b5888" for ::1 at 2016-07-13 12:48:37 +1000
+
+
+Started PUT "/__web_console/repl_sessions/3fdd984bf6c3b47818ffd877759b5888" for ::1 at 2016-07-13 12:49:05 +1000
+
+
+Started PUT "/__web_console/repl_sessions/3fdd984bf6c3b47818ffd877759b5888" for ::1 at 2016-07-13 12:50:46 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 13:57:44 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 698ms (ActiveRecord: 4.7ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/users_controller.rb:33:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.2ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.8ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 13:58:13 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 28.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 13:58:13 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 13:58:17 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.6ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 398ms (ActiveRecord: 2.2ms)
+
+RuntimeError (hell):
+  app/controllers/users_controller.rb:33:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.8ms)
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 13:58:27 +1000
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 14:01:15 +1000
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 14:01:21 +1000
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 14:01:25 +1000
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 14:01:37 +1000
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 14:01:40 +1000
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 14:01:47 +1000
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 14:01:51 +1000
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 14:02:01 +1000
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 14:02:12 +1000
+
+
+Started PUT "/__web_console/repl_sessions/67afa7edf807f61516f0c658a04d7859" for ::1 at 2016-07-13 14:02:33 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:04:55 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 760ms (ActiveRecord: 4.4ms)
+
+RuntimeError (hell):
+  app/controllers/users_controller.rb:33:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.2ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:05:15 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 709ms (Views: 28.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 14:05:15 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:06:36 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 847ms (ActiveRecord: 3.9ms)
+
+RuntimeError (hell):
+  app/controllers/users_controller.rb:38:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.3ms)
+
+
+Started PUT "/__web_console/repl_sessions/68e90ec55fff27c2071ee2e0b545a205" for ::1 at 2016-07-13 14:06:43 +1000
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 14:08:29 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 28.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 14:08:29 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:08:29 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:08:29 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 14:08:29 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:08:29 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 14:08:30 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 14:08:30 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:08:30 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:08:30 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:08:30 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 14:08:30 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 14:08:30 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:08:34 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 559ms (Views: 25.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 14:08:50 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-07-13 14:08:54 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MXn1jZvsrWf/PyIdLLZmBYZgmUKiuptfgXeXTD6jXnACXYChRlJ7KH61LymFG9C/SXrEQK7v3ys9Gb0pE93UFQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 14:08:54 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 14:08:59 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-07-13 14:09:05 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/2rP2MklKQdK8ALSEzIgPXZdCLU//EbNkANy/Zd2XV02d4TvppC65yhzT/h4X46OsMpINiqtW+KLieu2yNTEA==", "email"=>"phani@abc.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "phani@abc.com"]]
+Redirected to http://localhost:3000/users/30
+Completed 302 Found in 67ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 14:09:05 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:09:10 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 441ms (Views: 32.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:11:09 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1006ms (Views: 39.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 14:11:10 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 14:11:11 +1000
+
+
+Started DELETE "/logout" for ::1 at 2016-07-13 14:12:17 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mve3l4iMe6Ydb9Z4OwNkXrHkAT2h9Kmt8KL3ZHLe5pqp08K7VTKt6Zzl20ySrtLkfv5cP62h7dlMzN0BX6Bs/w=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 14:12:17 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 14:12:20 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 67ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-07-13 14:12:27 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D6ykZvhRW1bSv472P80F2d/l5jVuf+4nbiCwDeLYJfE8iNFKJe+NGVM1g8KWYLNjEP+7N2IqqlPSTppoz6avlA==", "email"=>"phani@abc.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "phani@abc.com"]]
+Redirected to http://localhost:3000/users/30
+Completed 302 Found in 72ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 14:12:27 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 46ms (Views: 28.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:12:32 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 842ms (ActiveRecord: 2.4ms)
+
+RuntimeError (hell):
+  app/controllers/users_controller.rb:33:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (96.0ms)
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:12:55 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:13:16 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:13:21 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:13:29 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:13:52 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:13:55 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:14:12 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:14:17 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:14:21 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:14:26 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:14:37 +1000
+
+
+Started PUT "/__web_console/repl_sessions/0fdd920b11945c5c214492af93cdae66" for ::1 at 2016-07-13 14:15:18 +1000
+
+
+Started GET "/" for ::1 at 2016-07-13 14:18:27 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 46ms (Views: 35.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 14:18:32 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:18:35 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 546ms (ActiveRecord: 1.6ms)
+
+RuntimeError (hell):
+  app/controllers/users_controller.rb:33:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:18:48 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 490ms (Views: 28.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 14:18:49 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:19:27 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 491ms (Views: 26.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 14:19:27 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:19:45 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 868ms (ActiveRecord: 4.0ms)
+
+RuntimeError (hell):
+  app/controllers/users_controller.rb:36:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.9ms)
+
+
+Started PUT "/__web_console/repl_sessions/68c38e019dbd5e9a50b46e02f58e1e48" for ::1 at 2016-07-13 14:19:52 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 14:22:03 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 916ms (Views: 25.9ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 14:22:04 +1000
+
+
+Started GET "/about" for ::1 at 2016-07-13 14:24:51 +1000
+Processing by PagesController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for ::1 at 2016-07-13 14:24:54 +1000
+Processing by PagesController#about as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered pages/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for ::1 at 2016-07-13 14:24:55 +1000
+Processing by PagesController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered pages/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 14:24:56 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 14:35:07 +1000
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 45ms (Views: 33.6ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-07-13 14:35:10 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5pG5xbrwzOtvJNLOBlMyx9pIg6X0UNp3ir98aUYCpEfVtczpZ04apO6u3/qv/oR9FVLep/gFngM20VYMa3wuIg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 14:35:10 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 14:35:13 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-07-13 14:35:18 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z8dFii8KEzA31BBJPlb1wD4QDWQXu8+DWSqVvTyIPcL84zCm8rTFf7ZeHX2X+0N68QpQZhvui/flRL/YEfa3pw==", "email"=>"phani@abc.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "phani@abc.com"]]
+Redirected to http://localhost:3000/users/30
+Completed 302 Found in 67ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 14:35:18 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Sydney" for ::1 at 2016-07-13 14:35:23 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Sydney"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Sydney"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Sydney"]]
+  Rendered users/search.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 461ms (Views: 24.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Melbourne" for ::1 at 2016-07-13 14:35:45 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Melbourne"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Melbourne"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Melbourne"]]
+  Rendered users/search.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 279ms (Views: 25.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Melbourne" for ::1 at 2016-07-13 14:44:47 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Melbourne"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Melbourne"]]
+Completed 500 Internal Server Error in 248ms (ActiveRecord: 4.3ms)
+
+RuntimeError (hell):
+  app/controllers/users_controller.rb:33:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.6ms)
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:44:53 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:45:13 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:45:26 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:45:41 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:45:47 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:45:54 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:46:01 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:46:22 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:46:42 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:47:17 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:47:24 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:47:31 +1000
+
+
+Started PUT "/__web_console/repl_sessions/cc38a0336de8b779d7e7b90d80cab035" for ::1 at 2016-07-13 14:47:54 +1000
+
+
+Started GET "/" for ::1 at 2016-07-13 14:57:01 +1000
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered pages/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Melbourne" for ::1 at 2016-07-13 15:03:57 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Melbourne"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Melbourne"]]
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 3.7ms)
+
+NoMethodError (undefined method `i' for #<Array:0x007f8acc14bd70>):
+  app/controllers/users_controller.rb:35:in `block in search'
+  app/controllers/users_controller.rb:34:in `each_index'
+  app/controllers/users_controller.rb:34:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.9ms)
+
+
+Started PUT "/__web_console/repl_sessions/7a5d5a00cefa345d496ab3ba769ed664" for ::1 at 2016-07-13 15:04:41 +1000
+
+
+Started PUT "/__web_console/repl_sessions/7a5d5a00cefa345d496ab3ba769ed664" for ::1 at 2016-07-13 15:04:51 +1000
+
+
+Started PUT "/__web_console/repl_sessions/7a5d5a00cefa345d496ab3ba769ed664" for ::1 at 2016-07-13 15:05:03 +1000
+
+
+Started PUT "/__web_console/repl_sessions/7a5d5a00cefa345d496ab3ba769ed664" for ::1 at 2016-07-13 15:05:09 +1000
+
+
+Started PUT "/__web_console/repl_sessions/7a5d5a00cefa345d496ab3ba769ed664" for ::1 at 2016-07-13 15:05:19 +1000
+
+
+Started PUT "/__web_console/repl_sessions/7a5d5a00cefa345d496ab3ba769ed664" for ::1 at 2016-07-13 15:05:26 +1000
+
+
+Started PUT "/__web_console/repl_sessions/7a5d5a00cefa345d496ab3ba769ed664" for ::1 at 2016-07-13 15:05:38 +1000
+
+
+Started PUT "/__web_console/repl_sessions/7a5d5a00cefa345d496ab3ba769ed664" for ::1 at 2016-07-13 15:05:42 +1000
+
+
+Started PUT "/__web_console/repl_sessions/7a5d5a00cefa345d496ab3ba769ed664" for ::1 at 2016-07-13 15:05:58 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Melbourne" for ::1 at 2016-07-13 15:06:27 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Melbourne"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Melbourne"]]
+Completed 500 Internal Server Error in 260ms (ActiveRecord: 3.8ms)
+
+RuntimeError (hell):
+  app/controllers/users_controller.rb:37:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.4ms)
+
+
+Started PUT "/__web_console/repl_sessions/1127248c1100c6550afe4aa4f8e6ea7c" for ::1 at 2016-07-13 15:06:38 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Melbourne" for ::1 at 2016-07-13 15:16:13 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Melbourne"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Melbourne"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Melbourne"]]
+  Rendered users/search.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 688ms (Views: 43.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 15:16:13 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Sydney" for ::1 at 2016-07-13 15:16:35 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Sydney"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Sydney"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Sydney"]]
+  Rendered users/search.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 713ms (Views: 26.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 15:20:25 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 928ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/users_controller.rb:35:in `block in search'
+  app/controllers/users_controller.rb:34:in `each_index'
+  app/controllers/users_controller.rb:34:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.0ms)
+
+
+Started PUT "/__web_console/repl_sessions/18694e6166d913a35efeefc4d09dd454" for ::1 at 2016-07-13 15:22:48 +1000
+
+
+Started PUT "/__web_console/repl_sessions/18694e6166d913a35efeefc4d09dd454" for ::1 at 2016-07-13 15:23:11 +1000
+
+
+Started PUT "/__web_console/repl_sessions/18694e6166d913a35efeefc4d09dd454" for ::1 at 2016-07-13 15:23:24 +1000
+
+
+Started PUT "/__web_console/repl_sessions/18694e6166d913a35efeefc4d09dd454" for ::1 at 2016-07-13 15:23:46 +1000
+
+
+Started PUT "/__web_console/repl_sessions/18694e6166d913a35efeefc4d09dd454" for ::1 at 2016-07-13 15:23:56 +1000
+
+
+Started PUT "/__web_console/repl_sessions/18694e6166d913a35efeefc4d09dd454" for ::1 at 2016-07-13 15:26:34 +1000
+
+
+Started PUT "/__web_console/repl_sessions/18694e6166d913a35efeefc4d09dd454" for ::1 at 2016-07-13 15:27:02 +1000
+
+
+Started PUT "/__web_console/repl_sessions/18694e6166d913a35efeefc4d09dd454" for ::1 at 2016-07-13 15:27:08 +1000
+
+
+Started PUT "/__web_console/repl_sessions/18694e6166d913a35efeefc4d09dd454" for ::1 at 2016-07-13 15:27:26 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 15:28:27 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 591ms (Views: 31.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 15:28:28 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 15:29:35 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+Completed 500 Internal Server Error in 573ms (ActiveRecord: 6.3ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/users_controller.rb:35:in `block in search'
+  app/controllers/users_controller.rb:34:in `each_index'
+  app/controllers/users_controller.rb:34:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.2ms)
+
+
+Started PUT "/__web_console/repl_sessions/9a5f93fa4aa2c134d8dfffa89848c246" for ::1 at 2016-07-13 15:30:47 +1000
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Hyderabad"]]
+
+
+Started PUT "/__web_console/repl_sessions/9a5f93fa4aa2c134d8dfffa89848c246" for ::1 at 2016-07-13 15:30:51 +1000
+
+
+Started PUT "/__web_console/repl_sessions/9a5f93fa4aa2c134d8dfffa89848c246" for ::1 at 2016-07-13 15:30:59 +1000
+
+
+Started PUT "/__web_console/repl_sessions/9a5f93fa4aa2c134d8dfffa89848c246" for ::1 at 2016-07-13 15:31:16 +1000
+
+
+Started PUT "/__web_console/repl_sessions/9a5f93fa4aa2c134d8dfffa89848c246" for ::1 at 2016-07-13 15:31:37 +1000
+
+
+Started PUT "/__web_console/repl_sessions/9a5f93fa4aa2c134d8dfffa89848c246" for ::1 at 2016-07-13 15:34:02 +1000
+
+
+Started PUT "/__web_console/repl_sessions/9a5f93fa4aa2c134d8dfffa89848c246" for ::1 at 2016-07-13 15:35:30 +1000
+
+
+Started PUT "/__web_console/repl_sessions/9a5f93fa4aa2c134d8dfffa89848c246" for ::1 at 2016-07-13 15:35:38 +1000
+
+
+Started PUT "/__web_console/repl_sessions/9a5f93fa4aa2c134d8dfffa89848c246" for ::1 at 2016-07-13 15:35:42 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 15:35:53 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 560ms (Views: 31.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 15:35:54 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Newyork" for ::1 at 2016-07-13 15:36:40 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Newyork"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.4ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Newyork"]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms)
+
+NoMethodError (undefined method `latitude' for nil:NilClass):
+  app/controllers/users_controller.rb:32:in `search'
+
+
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.2ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/phaniganti/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-07-13 15:41:23 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qEHUUGZ4gfQ4g5z9/M9ClqbClDh52LRxmycrAM17F7GbZaF8u8ZXu7kJkclVYvQsadjJOnWN8AUnSQFl4AWd1A=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 15:41:23 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 15:41:26 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2016-07-13 15:41:28 +1000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-07-13 15:41:47 +1000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xnVjLLoovQ2ktlN/t3XP9lFAG9nQv0g4G2J2LjrP/sX1URYAZ5ZrQiU8Xkse2HlMnlpG29zqDEynDFxLF7F0oA==", "user"=>{"name"=>"krant", "email"=>"kranth@abc.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kranth@abc.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("name", "email", "password_digest") VALUES ($1, $2, $3) RETURNING "id"  [["name", "krant"], ["email", "kranth@abc.com"], ["password_digest", "$2a$10$fRLi47BvwxhSTDtKrbaqvOOq98F4rORxEI42H8JZiZAlJoTf66a76"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."email" = 'kranth@abc.com' AND "users"."id" != 34) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/34
+Completed 302 Found in 88ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/34" for ::1 at 2016-07-13 15:41:47 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 34]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-13 15:41:54 +1000
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  Rendered users/edit.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/34" for ::1 at 2016-07-13 15:42:10 +1000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bAJtNzwWCTeiJe9U/PfSHG8ZfiRhvGSQJAImCAIrPshfJhgb4ajfeCOv4mBVWmSmoAMjJm3pIOSYbAxtL1W0rQ==", "user"=>{"name"=>"krant", "email"=>"kranth@abc.com", "image"=>"http://fillmurray.com/200/200", "location"=>"Newyork", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save Changes", "id"=>"34"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 34]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Newyork"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("name", "latitude", "longitude") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Newyork"], ["latitude", 40.7127837], ["longitude", -74.0059413]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Unpermitted parameter: location
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'kranth@abc.com' AND "users"."id" != 34) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "image" = $1 WHERE "users"."id" = $2[0m  [["image", "http://fillmurray.com/200/200"], ["id", 34]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'kranth@abc.com' AND "users"."id" != 34) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "location_id" = $1 WHERE "users"."id" = $2[0m  [["location_id", 20], ["id", 34]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/34
+Completed 302 Found in 422ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/users/34" for ::1 at 2016-07-13 15:42:10 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 34]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-07-13 15:42:16 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3bebOwmBURjX2HvR2Dd5pRCDmNB0y9QhKn5JvXAn6Nzuk+4X1D+HV1ZSduVxms8f35nF0niekFWWEGPYXVliuQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 34]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 15:42:16 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 15:42:17 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-07-13 15:42:27 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FOYzrgH3BfMdsykbaIQ9kG7lsn/uyxrl6ryxC0cmUXQnwkaC3EnTvJw5JC/BKYsqof/vfeKeXpFW0ptualjbEQ==", "email"=>"phani@abc.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "phani@abc.com"]]
+Redirected to http://localhost:3000/users/30
+Completed 302 Found in 72ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 15:42:27 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Newyork" for ::1 at 2016-07-13 15:42:32 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Newyork"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Newyork"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Newyork"]]
+  Rendered users/search.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1001ms (Views: 22.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/34" for ::1 at 2016-07-13 15:42:50 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-07-13 15:42:55 +1000
+Processing by UsersController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  Rendered users/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/34" for ::1 at 2016-07-13 15:54:38 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 15:54:38 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Sydney" for ::1 at 2016-07-13 15:54:42 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Sydney"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Sydney"]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Sydney"]]
+  Rendered users/search.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 438ms (Views: 27.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Sydney" for ::1 at 2016-07-13 15:55:54 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Sydney"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Sydney"]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Sydney"]]
+  Rendered users/search.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 253ms (Views: 27.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 15:55:55 +1000
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 15:56:35 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Melbourne" for ::1 at 2016-07-13 15:56:39 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Melbourne"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Melbourne"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Melbourne"]]
+  Rendered users/search.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 701ms (Views: 26.3ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-07-13 15:56:51 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fgeMSVie4oF92n+tBnsFYi8xNfpvGhgrjdpip38bTDtNI/llhSA0zvxQcpmv1rPY4Cto+GNPXF8xtEjCUmXGXg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 30]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 15:56:51 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 15:56:53 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-07-13 15:57:02 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YgNSNYa0VkL+QAV5Dc2TXMCnzScQGYPPZRldNB7UqdlRJycZWwqADX/KCE2kYCXmD72QJRxMx7vZd3dRM6ojvA==", "email"=>"rama@abc.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "rama@abc.com"]]
+Redirected to http://localhost:3000/users/33
+Completed 302 Found in 66ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/33" for ::1 at 2016-07-13 15:57:02 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Sydney" for ::1 at 2016-07-13 15:57:08 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Sydney"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mLocation Load (0.3ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Sydney"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Sydney"]]
+  Rendered users/search.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 490ms (Views: 25.6ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-07-13 15:57:23 +1000
+Processing by SessionController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hXI/Jp4Vev1YnR9j/NPRRUIA55uNJkadLQ9H43umfra2VkoKQ6usstkXEldVfmf/jRq6mYFzAumRYW2GVtj00w=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-07-13 15:57:23 +1000
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-07-13 15:57:26 +1000
+Processing by SessionController#new as HTML
+  Rendered session/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-07-13 15:57:51 +1000
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ws37RqdUiYBsF4OqZIfuNQNFnQaRUi5q8sIaC7/u+olp6Y5qeupfz+2djp7NKliPzF/ABJ0Hah5OrDBukpBw7A==", "email"=>"rama@abc.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "rama@abc.com"]]
+Redirected to http://localhost:3000/users/33
+Completed 302 Found in 68ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/33" for ::1 at 2016-07-13 15:57:51 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 15:57:54 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 607ms (Views: 24.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/30" for ::1 at 2016-07-13 15:59:03 +1000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 30]]
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 16:36:58 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 847ms (Views: 35.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 16:43:52 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 599ms (Views: 57.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-f334029a51280dca8358fd4b3e50a33c8300c86b4549a649d14d5e11ba10d066.css?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 16:43:53 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 16:44:13 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 436ms (Views: 41.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-c9fd2e0735cf68175a44ce2c60ab34bf76f729d899a7b77a73b458c6d61c35a5.css?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 16:44:13 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 16:46:48 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 1000ms (Views: 45.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-a6b0f539ab8378db38c2cdb57f61e56a6508d6d30104e01e75e50f21e863bca7.css?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 16:46:50 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 16:48:40 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1  [["name", "Hyderabad"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)[0m  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 950ms (Views: 46.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/application.self-eef5a3368ab72c789edee9914c2a2abadfd5f202a4d54227152ff30aaf7ebfb4.css?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 16:48:41 +1000
+
+
+Started GET "/search?utf8=%E2%9C%93&name=Hyderabad" for ::1 at 2016-07-13 16:49:16 +1000
+Processing by UsersController#search as HTML
+  Parameters: {"utf8"=>"✓", "name"=>"Hyderabad"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."name" = $1 LIMIT 1[0m  [["name", "Hyderabad"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."location_id" IN (SELECT "locations"."id" FROM "locations" WHERE "locations"."name" = $1)  [["name", "Hyderabad"]]
+  Rendered users/search.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 467ms (Views: 29.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/_bootstrap-sass.self-fdcfcce36bd0c9f216de18cfb37f5bd1f5664449a1f2d958e8782e71ebb3bab0.css?body=1" for ::1 at 2016-07-13 16:49:16 +1000
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:49:16 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-13 16:49:16 +1000
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:49:16 +1000
+
+
+Started GET "/assets/pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-13 16:49:16 +1000
+
+
+Started GET "/assets/application.self-eef5a3368ab72c789edee9914c2a2abadfd5f202a4d54227152ff30aaf7ebfb4.css?body=1" for ::1 at 2016-07-13 16:49:17 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-13 16:49:17 +1000
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-13 16:49:17 +1000
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:49:17 +1000
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:49:17 +1000
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-13 16:49:17 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-13 16:49:17 +1000

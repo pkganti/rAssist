@@ -1,17 +1,28 @@
-<h1>Your destination results are</h1>
+
+<div class="users">
+<h3>Here's your rAssists</h3>
 <% @users.each do |user| %>
   <%= link_to user.name, user %>
+  <%= image_tag user.image %>
 <% end %>
+</div>
 
 <p>
   <strong>Address:</strong>
   <%= @loc.name %>
 </p>
 
+<div class="map">
+<h3>Location Map</h3>
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@loc.latitude}%2C#{@loc.longitude}" %>
+</div>
 
-<%= image_tag @image %>
-
+<div class="postcards">
+<h3>Post Cards</h3>
+<% @pic_references.each do |pic| %>
+  <%= image_tag "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=#{pic}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE" %>
+<% end %>
+</div>
 <!-- <h3>Nearby locations</h3>
 <ul>
 <%# for location in @loc.nearbys(10) %>
