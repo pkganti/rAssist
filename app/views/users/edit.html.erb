@@ -22,7 +22,13 @@
   <%= f.url_field :image %>
 
   <%= f.label :location %>
-  <%= f.text_field :location, :value => @user.location.name %>
+
+  <% if @user.location.nil? %>
+    <%= f.text_field :location,:placeholder=>'Location'  %>
+  <% else %>
+    <%= f.text_field :location, :value => @user.location.name %>
+  <% end %>
+
   <!-- <%#= f.select :location_id, Location.pluck(:name, :id), :include_blank => true %> -->
 
   <%= f.label :password %>
