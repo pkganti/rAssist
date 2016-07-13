@@ -17,6 +17,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'httparty'
 gem 'geocoder'
 gem 'bootstrap-sass'
+gem 'rails_12factor'
+gem 'cloudinary'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

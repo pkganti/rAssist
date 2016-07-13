@@ -15,7 +15,10 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create user_params
+
+    @user = User.new user_params
+    raise "help"
+    @user.image = req["url"]
     if @user.save
       session[:user_id] = @user.id
       redirect_to @user
@@ -30,23 +33,26 @@ class UsersController < ApplicationController
     @users = User.where(:location => locals)
     @loc = Location.where(name: params[:name]).take
     @google_api_loc_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{@loc.latitude},#{@loc.longitude}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE"
-  loc_reference = HTTParty.get(@google_api_loc_url, :verify => false)
-  loc_reference["results"].each_index do |i|
-    @pic_references.push(loc_reference["results"][i]["photos"].first["photo_reference"]) if loc_reference["results"][i].include?("photos")
+    loc_reference = HTTParty.get(@google_api_loc_url, :verify => false)
+    loc_reference["results"].each_index do |i|
+      @pic_references.push(loc_reference["results"][i]["photos"].first["photo_reference"]) if loc_reference["results"][i].include?("photos")
+    end
   end
   # raise "hell"
   # pic_reference =  loc_reference["results"].second["photos"].first["photo_reference"]
 
   # @image = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=#{pic_reference}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE"
 
-  end
-
   def show
     @user = User.find params[:id]
   end
 
   def update
+    req = Cloudinary::Uploader.upload(params[:image])
+    # This is the magic stuff that will let us upload an image to Cloudinary when creating a new animal.
     @user = @current_user
+    # raise "hell"
+    @user.image = req["url"]
     location = Location.find_or_create_by(:name => params[:user][:location])
     # raise "hell"
     if @user.update user_params

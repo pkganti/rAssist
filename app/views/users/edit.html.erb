@@ -10,7 +10,7 @@
   </ol>
 <% end %>
 
-<%= form_for @user do |f| %>
+<%= form_for @user, :html => {:multipart => true} do |f| %>
 
   <%= f.label :name %>
   <%= f.text_field :name, :autofocus => true, :required => true %>
@@ -19,7 +19,7 @@
   <%= f.text_field :email, :required => true %>
 
   <%= f.label :image %>
-  <%= f.url_field :image %>
+  <%= file_field_tag :image %>
 
   <%= f.label :location %>
 

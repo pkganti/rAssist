@@ -4,4 +4,6 @@
 <% end %>
 <li>Name: <%= @user.name %></li>
 <li>Email: <%= @user.email %></li>
-<img src="<%= @user.image %>" class="img-responsive" alt="">
+<div>
+<%= cl_image_tag @user.image %>
+</div>
