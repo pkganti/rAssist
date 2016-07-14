@@ -1,19 +1,10 @@
-<div class="container">
-
+<div class="container col-xs-7 col-xs-offset-4">
 <%= form_tag :class => "form-signin" '/login' do %>
   <h2 class="form-signin-heading">Please sign in<span class='glyphicon glyphicon-send'></span></h2>
   <%= label_tag(:email, "Email", :autofocus => true) %>
   <%= text_field_tag(:email, nil, :id => "inputEmail", :class => "form-control",  :placeholder => "Email address") %>
   <%= label_tag(:password, "Password") %>
   <%= password_field_tag(:password, nil, :id => "inputPassword", :class => "form-control",  :placeholder => "Password") %>
-  <%= submit_tag('Login', :class => "btn btn-lg btn-primary btn-block" )%>
+  <%= submit_tag('Login', :id => "submit", :class => "btn btn-lg btn-primary btn-block" )%>
 <% end %>
-
-<footer class="footer">
-  <hr>
-  <div class="container">
-    <p class="text-muted">&copy; 2016 rAssist</p>
-  </div>
-</footer>
-
 </div>

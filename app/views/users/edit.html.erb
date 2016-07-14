@@ -1,39 +1,62 @@
-<h1>Edit Profile
-<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-</h1>
+<div class="col-xs-6 col-xs-offset-4">
+  <h2>Edit Profile
+  <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+  </h2>
 
-<% if @user.errors.any? %>
-  <ol>
-    <% @user.errors.full_messages.each do |message| %>
-      <li><%= message %></li>
-    <% end %>
-  </ol>
-<% end %>
-
-<%= form_for @user, :html => {:multipart => true} do |f| %>
-
-  <%= f.label :name %>
-  <%= f.text_field :name, :autofocus => true, :required => true %>
-
-  <%= f.label :email %>
-  <%= f.text_field :email, :required => true %>
-
-  <%= f.label :image %>
-  <%= file_field_tag :image %>
-
-  <%= f.label :location %>
-
-  <% if @user.location.nil? %>
-    <%= f.text_field :location,:placeholder=>'Location'  %>
-  <% else %>
-    <%= f.text_field :location, :value => @user.location.name %>
+  <% if @user.errors.any? %>
+    <ol>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ol>
   <% end %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+<%= form_for(@user, :class => "form-horizontal", :html => {:multipart => true}) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <div>
+      <%= f.text_field(:name, :class => "form-control", :autofocus => true, :required => true )%>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %>
+    <div>
+    <%= f.text_field(:email, :class => "form-control", :required => true) %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :image %>
+    <div>
+      <%= cl_image_upload_tag(:image, :class => "form-control" )%>
+    </div>
+  </div>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <div class="form-group">
+  <%= f.label :location %>
+    <div>
+
+      <% if @user.location.nil? %>
+        <%= f.text_field(:location, :placeholder=>'Location', :class => "form-control" )%>
+      <% else %>
+        <%= f.text_field(:location, :value => @user.location.name, :class => "form-control" )%>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <div>
+      <%= f.password_field(:password, :class => "form-control" )%>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <div>
+      <%= f.password_field(:password_confirmation, :class => "form-control" )%>
+    </div>
+  </div>
 
   <%= f.submit "Save Changes", :class => "btn btn-primary"%>
 <% end %>
+</div>

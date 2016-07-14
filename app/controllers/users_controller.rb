@@ -17,8 +17,8 @@ class UsersController < ApplicationController
   def create
 
     @user = User.new user_params
-    raise "help"
-    @user.image = req["url"]
+    # # raise "help"
+    # @user.image = req["url"]
     if @user.save
       session[:user_id] = @user.id
       redirect_to @user
@@ -28,14 +28,18 @@ class UsersController < ApplicationController
   end
 
   def search
-    @pic_references = []
-    locals = Location.where(name: params[:name])
-    @users = User.where(:location => locals)
-    @loc = Location.where(name: params[:name]).take
-    @google_api_loc_url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{@loc.latitude},#{@loc.longitude}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE"
-    loc_reference = HTTParty.get(@google_api_loc_url, :verify => false)
-    loc_reference["results"].each_index do |i|
-      @pic_references.push(loc_reference["results"][i]["photos"].first["photo_reference"]) if loc_reference["results"][i].include?("photos")
+    if params[:name].present?
+      @pic_references = []
+      locals = Location.where(name: params[:name])
+      @users = User.where(:location => locals)
+      @loc = Location.where(name: params[:name]).take
+      @google_api_loc_url =   "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{@loc.latitude},#{@loc.longitude}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE"
+      loc_reference = HTTParty.get(@google_api_loc_url, :verify => false)
+      loc_reference["results"].each_index do |i|
+        @pic_references.push(loc_reference["results"][i]["photos"].first["photo_reference"]) if   loc_reference["results"][i].include?("photos")
+      end
+    else
+      redirect_to @current_user
     end
   end
   # raise "hell"
@@ -48,25 +52,36 @@ class UsersController < ApplicationController
   end
 
   def update
-    req = Cloudinary::Uploader.upload(params[:image])
+
     # This is the magic stuff that will let us upload an image to Cloudinary when creating a new animal.
     @user = @current_user
-    # raise "hell"
-    @user.image = req["url"]
-    location = Location.find_or_create_by(:name => params[:user][:location])
-    # raise "hell"
-    if @user.update user_params
-      location.users << @user
-      redirect_to @user
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      @user.image = req["url"]
+      location = Location.find_or_create_by(:name => params[:user][:location])
+      # raise "hell"
+      if @user.update user_params
+        location.users << @user
+        redirect_to @user
+      else
+        render :edit
+      end
     else
-      render :edit
+      location = Location.find_or_create_by(:name => params[:user][:location])
+      # raise "hell"
+      if @user.update user_params
+        location.users << @user
+        redirect_to @user
+      else
+        render :edit
+      end
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :image, :password, :password_confirmation )
+    params.require(:user).permit(:name, :email, :password, :password_confirmation )
   end
 
   def authorise_user

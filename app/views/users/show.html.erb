@@ -1,7 +1,15 @@
-<div class="container">
+<div class="container col-xs-7 col-xs-offset-5">
+
+<div>
+<%= cl_image_tag(@user.image, :class => "img-circle show-img")%>
+<li class="show-info">Name: <%= @user.name %></li>
+<li class="show-info">Email: <%= @user.email %></li>
+</div>
+
+<div class="search-box">
 <%= form_tag(search_path, :method => :get) do %>
   <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-4">
       <div class="input-group">
         <input id="searchfield" type="text" class="form-control" name="name" placeholder="Search your favorite destination">
         <span class="input-group-btn">
@@ -11,11 +19,6 @@
     </div>
   </div>
 <% end %>
-<li>Name: <%= @user.name %></li>
-<li>Email: <%= @user.email %></li>
-<div>
-<%= cl_image_tag(@user.image, :class => "img-circle")%>
 </div>
-
 
 </div>

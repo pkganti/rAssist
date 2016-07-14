@@ -1,41 +1,42 @@
 <div class="container">
-<div class="row">
-<div class="users col-md-4">
-<h3>Here's your rAssists</h3>
-<% @users.each do |user| %>
-<%= link_to cl_image_tag(user.image, :class => "img-circle"), user  %>
+  <div class="row">
+    <div class="users col-md-4">
+      <h3>Here's your rAssists</h3>
+      <% @users.each do |user| %>
+      <%= link_to cl_image_tag(user.image, :class => "img-circle"), user  %>
   <!-- <%#= link_to user.image, user %> -->
   <!-- <%#= image_tag user.image %> -->
-<% end %>
-</div>
+      <% end %>
+    </div>
 
 <!-- <p>
   <strong>Address:</strong>
   <%= @loc.name %>
 </p> -->
 
-<div class="map col-md-4">
-<h3>Location Map</h3>
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@loc.latitude}%2C#{@loc.longitude}" %>
-</div>
+    <div class="map col-md-4">
+      <h3>Location Map</h3>
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@loc.latitude}%2C#{@loc.longitude}" %>
+    </div>
 
-<div class="postcards col-md-4">
-<h3>Post Cards</h3>
-<% @pic_references.each do |pic| %>
-  <%= image_tag "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=#{pic}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE" %>
-<% end %>
-</div>
+    <div class="postcards col-md-4">
+      <h3>Post Cards</h3>
+      <% @pic_references.each do |pic|%>
+        <%= image_tag "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=#{pic}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE"%>
+      <% end %>
+    </div>
 <!-- <h3>Nearby locations</h3>
 <ul>
 <%# for location in @loc.nearbys(10) %>
   <li><%#= link_to location.name, location %> (<%#= location.distance.round(2) %> miles)</li>
 <%# end %>
 </ul> -->
-</div>
+  </div>
 <!-- <%#= form_tag(search_path, :method => :get) do %>
   <input id="searchfield" type="text" name="name" placeholder="Search your favorite destination">
   <button id="searchbutton">Search</button>
 <%# end %> -->
+<div class="col-xs-7 col-xs-offset-4">
 <%= form_tag(search_path, :method => :get) do %>
   <div class="row">
     <div class="col-lg-6">
@@ -48,5 +49,6 @@
     </div>
   </div>
 <% end %>
+</div>
 
 </div>
