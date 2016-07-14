@@ -39,7 +39,11 @@ class UsersController < ApplicationController
   def search
     if params[:name].present?
       @pic_references = []
+
       locals = Location.where(name: params[:name])
+      # raise "hell"
+      # Model.where("models.keywords ~= ?", 'crescent')
+      # @users = User.where(:location => locals)
       @users = User.where(:location => locals)
       @loc = Location.where(name: params[:name]).take
       @google_api_loc_url =   "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{@loc.latitude},#{@loc.longitude}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE"
@@ -90,7 +94,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation )
+    params.require(:user).permit(:name, :email, :contact, :password, :password_confirmation )
   end
 
   def authorise_user

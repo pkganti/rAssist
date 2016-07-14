@@ -1,11 +1,15 @@
-<div class="container col-xs-7 col-xs-offset-5">
+<div class="container col-xs-8 col-xs-offset-5">
 
-    <div>
+    <div class="show-profile">
         <%= cl_image_tag(@user.image, :class => "img-circle show-img")%>
-        <li class="show-info">Name:
+        <li class="show-info"><strong>Name:</strong>
             <%= @user.name %></li>
-        <li class="show-info">Email:
+        <li class="show-info"><strong>Email:</strong>
             <%= @user.email %></li>
+        <li class="show-info"><strong>Location:</strong>
+                <%= @user.location.name %></li>
+        <li class="show-info"><strong>Contact:</strong>
+                <%= @user.contact %></li>
     </div>
 
     <div class="search-box">
@@ -26,13 +30,12 @@
     <% if @current_user != @user %>
     <div class="mailbox">
         <%= form_tag message_path, :method => :get do %>
-        <%= hidden_field_tag(:user_id, @user.id)%> 
+        <%= hidden_field_tag(:user_id, @user.id)%>
         <textarea rows="4" cols="50" class="form-control" name="mailinput"></textarea>
         <span class="input-group-btn">
-            <button class="btn btn-default" id="searchbutton">Send Mail</button>
+          <button class="btn btn-default" id="searchbutton">Send Mail</button>
         </span>
         <% end %>
-
     </div>
     <% end %>
 </div>
