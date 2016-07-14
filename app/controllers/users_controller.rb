@@ -40,12 +40,15 @@ class UsersController < ApplicationController
     if params[:name].present?
       @pic_references = []
 
-      locals = Location.where(name: params[:name])
+      # locals = Location.where(name: params[:name])
+      locals = Location.where('name ILIKE ?', '%' + params[:name] + '%')
+
       # raise "hell"
       # Model.where("models.keywords ~= ?", 'crescent')
       # @users = User.where(:location => locals)
       @users = User.where(:location => locals)
-      @loc = Location.where(name: params[:name]).take
+      # @loc = Location.where(name: params[:name]).take
+      @loc = Location.where('name ILIKE ?', '%' + params[:name] + '%').take
       @google_api_loc_url =   "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{@loc.latitude},#{@loc.longitude}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE"
       loc_reference = HTTParty.get(@google_api_loc_url, :verify => false)
       loc_reference["results"].each_index do |i|

@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.destroy_all
 
-u1 = User.create(:name => "Phani", :email => 'phani@abc.com', :password => 'chicken', :password_confirmation => 'chicken')
-u2 = User.create(:name => "Kumar", :email => 'kumar@abc.com', :password => 'chicken', :password_confirmation => 'chicken')
-u3 = User.create(:name => "Bingo", :email => 'bingo@abc.com', :password => 'chicken', :password_confirmation => 'chicken')
+u1 = User.create(:name => "Phani", :email => 'ganti.phani@gmail.com', :contact => "084384480", :password => 'chicken', :password_confirmation => 'chicken')
+u2 = User.create(:name => "Kumar", :email => 'ganti.phani@hotmail.com', :contact => "043400400", :password => 'chicken', :password_confirmation => 'chicken')
+u3 = User.create(:name => "Bingo", :email => 'gpk08@yahoo.com', :contact => "046645432", :password => 'chicken', :password_confirmation => 'chicken')
 
 
 Location.destroy_all
