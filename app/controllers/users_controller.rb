@@ -6,6 +6,15 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def message
+    user = User.find(params[:user_id])
+    message = params[:mailinput]
+    # call the email action
+    # redirect_to :index
+    UserMailer.sendmail(user, @current_user, message).deliver_now
+    redirect_to @current_user
+  end
+
   def edit
     @user = @current_user
   end
@@ -15,12 +24,12 @@ class UsersController < ApplicationController
   end
 
   def create
-
     @user = User.new user_params
     # # raise "help"
     # @user.image = req["url"]
     if @user.save
       session[:user_id] = @user.id
+      UserMailer.welcome(@user).deliver_now
       redirect_to @user
     else
       render :new
