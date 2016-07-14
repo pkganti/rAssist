@@ -17,18 +17,19 @@
  .users {
    max-width: 33%;
    height: 500px;
-   border: 1px solid green;
+   /*border: 1px solid green;*/
    overflow: auto;
  }
 
  .users img {
-   width: 100%;
+   width: 100px;
+   height: 100px;
  }
 
  .map {
    max-width: 33%;
-   height: 300px;
-   border: 1px solid green;
+   height: 500px;
+   /*border: 1px solid green;*/
    overflow: auto;
  }
 
@@ -39,10 +40,11 @@
  .postcards {
    max-width: 33%;
    height: 500px;
-   border: 1px solid green;
+   /*border: 1px solid green;*/
    overflow: auto;
  }
 
  .postcards img {
-   width: 100%;
+   width: 400px;
+   height: 400px;
  }

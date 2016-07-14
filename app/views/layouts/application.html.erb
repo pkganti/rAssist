@@ -9,25 +9,28 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <ul class="nav nav-pills">
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
   <% if @current_user.present? %>
 
-    <li role="presentation" class="active"><%= link_to 'Home', @current_user %></li>
-    <li role="presentation"><%= link_to 'About', about_path %></li>
+    <li class="active"><%= link_to 'Home', @current_user %></li>
+    <li><%= link_to 'About', about_path %></li>
     <!-- <%# if @current_user.admin? %>
       <%#= link_to "Users", users_path %>
     <%# end %> -->
-    <li role="presentation"><%= link_to "Logout #{ @current_user.email }", logout_path, :method => :delete %></li>
-    <li role="presentation"><%= link_to "Change Profile", users_edit_path %></li>
+    <li><%= link_to "Logout #{ @current_user.email }", logout_path, :method => :delete %></li>
+    <li><%= link_to "Change Profile", users_edit_path %></li>
   <% else %>
-    <li role="presentation"><%= link_to 'Home', root_path %></li>
-    <li role="presentation"><%= link_to 'About', about_path %></li>
-    <li role="presentation"><%= link_to 'Sign up', new_user_path %></li>
-    <li role="presentation"><%= link_to 'Login', login_path %></li>
+    <li><%= link_to 'Home', root_path %></li>
+    <li><%= link_to 'About', about_path %></li>
+    <li><%= link_to 'Sign up', new_user_path %></li>
+    <li><%= link_to 'Login', login_path %></li>
   <% end %>
   </ul>
 </nav>
+<div>
+<img src="/assets/R.jpg" alt="">
+</div>
 
 <%= yield %>
 

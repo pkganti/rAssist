@@ -1,9 +1,27 @@
+<div class="container">
 <%= form_tag(search_path, :method => :get) do %>
-  <input id="searchfield" type="text" name="name" placeholder="Search your favorite destination">
-  <button id="searchbutton">Search</button>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="input-group">
+        <input id="searchfield" type="text" class="form-control" name="name" placeholder="Search your favorite destination">
+        <span class="input-group-btn">
+          <button class="btn btn-default" id="searchbutton">Go!</button>
+        </span>
+      </div>
+    </div>
+  </div>
 <% end %>
 <li>Name: <%= @user.name %></li>
 <li>Email: <%= @user.email %></li>
 <div>
-<%= cl_image_tag @user.image %>
+<%= cl_image_tag(@user.image, :class => "img-circle")%>
+</div>
+
+<footer class="footer">
+  <hr>
+  <div class="container">
+    <p class="text-muted">&copy; 2016 rAssist</p>
+  </div>
+</footer>
+
 </div>
