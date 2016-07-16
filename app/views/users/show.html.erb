@@ -1,13 +1,19 @@
 <div class="container col-xs-8 col-xs-offset-5">
 
     <div class="show-profile">
+        <% if @user.image.present? %>
         <%= cl_image_tag(@user.image, :class => "img-circle show-img")%>
+        <% else %>
+        <%= image_tag 'avatar.jpg', :class => "img-circle show-img" %>
+        <% end %>
         <li class="show-info"><strong>Name:</strong>
             <%= @user.name %></li>
         <li class="show-info"><strong>Email:</strong>
             <%= @user.email %></li>
-        <!-- <li class="show-info"><strong>Location:</strong>
-                <%#= @user.location.name %></li> -->
+        <% if @user.location_id.present? %>
+        <li class="show-info"><strong>Location:</strong>
+                <%= @user.location.name %></li>
+        <% end %>
         <li class="show-info"><strong>Contact:</strong>
                 <%= @user.contact %></li>
     </div>

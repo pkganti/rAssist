@@ -5,7 +5,11 @@
         <h4>rAssists</h4>
       </div>
       <% @users.each do |user| %>
+      <% if user.image.present? %>
       <%= link_to cl_image_tag(user.image, :class => "img-circle"), user  %>
+      <% else %>
+      <%= link_to image_tag('avatar.jpg', :class => "img-circle show-img"), user %>
+      <% end %>
   <!-- <%#= link_to user.image, user %> -->
   <!-- <%#= image_tag user.image %> -->
       <% end %>
@@ -16,12 +20,12 @@
   <%= @loc.name %>
 </p> -->
 
-    <div class="map col-md-4">
+    <!-- <div class="map col-md-4">
       <div class="searchresheadings">
         <h4>Location Map</h4>
       </div>
-      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@loc.latitude}%2C#{@loc.longitude}" %>
-    </div>
+      <%#= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@loc.latitude}%2C#{@loc.longitude}" %>
+    </div> -->
 
     <div class="postcards col-md-4">
       <div class="searchresheadings">
