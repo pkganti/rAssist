@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RAssist</title>
+  <title>remoteAssist</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -28,11 +28,16 @@
   <% end %>
   </ul>
 </nav>
-<div>
-  <%= image_tag 'R.png' %>
-</div>
+<div id="main">
+  <div>
+    <%= image_tag 'R.png', :class => "logo" %>
+  </div>
 
-<%= yield %>
+  <%= yield %>
+
+
+
+</div>
 
 <footer class="footer">
   <p class="text-muted">&copy; 2016 rAssist</p>

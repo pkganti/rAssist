@@ -10,10 +10,20 @@
             <%= @user.name %></li>
         <li class="show-info"><strong>Email:</strong>
             <%= @user.email %></li>
-        <% if @user.location_id.present? %>
-        <li class="show-info"><strong>Location:</strong>
-                <%= @user.location.name %></li>
-        <% end %>
+
+        <li class="show-info"><strong>Places Visited:</strong>
+            <% @user.location.each do |location| %>
+            <%= location.name %>
+          	  &nbsp
+            <% end %>
+
+          </li>
+
+            <%# raise "hell" %>
+        <%# if @user.location_id.present? %>
+        <!-- <li class="show-info"><strong>Location:</strong> -->
+                <%#= @user.location.name %></li>
+        <%# end %>
         <li class="show-info"><strong>Contact:</strong>
                 <%= @user.contact %></li>
     </div>

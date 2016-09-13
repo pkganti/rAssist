@@ -40,8 +40,18 @@ class UsersController < ApplicationController
     if params[:name].present?
       @pic_references = []
       locals = Location.where('name ILIKE ?', '%' + params[:name] + '%')
-      @users = User.where(:location => locals)
+      # raise "hell"
+      # @users = User.where(:location => locals)
+      @users = Location.find(locals[0].id).users
       # @loc = Location.where(name: params[:name]).take
+      weatherkey = "9ad86ee5f8d227b64f0e2a6545ef7f72"
+      coordinates = Geocoder.coordinates(params[:name])
+
+
+      weatherForecast = "http://api.openweathermap.org/data/2.5/forecast/daily?lat=#{coordinates[0]}&lon=#{coordinates[1]}&cnt=3&APPID=#{weatherkey}"
+
+      @weatherDetails = HTTParty.get(weatherForecast, :verify => false)
+
       @loc = Location.where('name ILIKE ?', '%' + params[:name] + '%').take
       if !(@loc.nil?)
         @google_api_loc_url =   "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{@loc.latitude},#{@loc.longitude}&key=AIzaSyCv0-SAulKA7HptNKQDsMNlT0jYrYx2eoE"
@@ -63,6 +73,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
+    # raise "hell"
+
   end
 
   def update
@@ -84,6 +96,7 @@ class UsersController < ApplicationController
       location = Location.find_or_create_by(:name => params[:user][:location])
       # raise "hell"
       if @user.update user_params
+        # raise "hell"
         location.users << @user
         redirect_to @user
       else
@@ -95,7 +108,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :contact, :password, :password_confirmation )
+    params.require(:user).permit(:name, :email, :contact, :password, :password_confirmation, :city )
   end
 
   def authorise_user
